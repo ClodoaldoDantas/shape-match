@@ -1,0 +1,99 @@
+/* Global styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  --zinc-50: #fafafa;
+  --zinc-900: #18181b;
+
+  --shape-square: #ff2056;
+  --shape-circle: #2b7fff;
+  --shape-triangle: #00a63e;
+}
+
+body {
+  background-color: var(--zinc-50);
+  color: var(--zinc-900);
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  gap: 0.5rem;
+}
+
+.header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.header > i {
+  font-size: 28px;
+  color: var(--zinc-900);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Shapes */
+.shape {
+  height: 5rem;
+  width: 5rem;
+  cursor: grab;
+}
+
+.shape.hidden {
+  display: none;
+}
+
+#square {
+  background: var(--shape-square);
+}
+
+#circle {
+  background: var(--shape-circle);
+  border-radius: 50%;
+}
+
+/* Dropzone */
+.dropzone {
+  height: 5rem;
+  width: 5rem;
+  background: transparent;
+  border: 2px dashed var(--zinc-900);
+}
+
+.dropzone[data-shape="circle"] {
+  border-radius: 50%;
+}
+
+.dropzone.dropped {
+  border: 0;
+}
