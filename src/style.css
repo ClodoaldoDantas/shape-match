@@ -23,7 +23,7 @@
 body {
   background-color: var(--zinc-50);
   color: var(--zinc-900);
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.5;
 }
 
@@ -104,11 +104,11 @@ body {
   border: 2px dashed var(--zinc-900);
 }
 
-.dropzone[data-shape="circle"] {
+.dropzone[data-shape='circle'] {
   border-radius: 50%;
 }
 
-.dropzone[data-shape="rectangle"] {
+.dropzone[data-shape='rectangle'] {
   width: 10rem;
 }
 
